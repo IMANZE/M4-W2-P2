@@ -16,6 +16,7 @@ function searchDeezer() {
         <h5 class="card-title">${books.title}</h5>
         <p class="card-text">${books.category}</p>
         <p class="card-text">$${books.price}</p>
+        <button type="button" class="btn btn-dark">Add to cart</button>
         </div>
         </div>`
         )
