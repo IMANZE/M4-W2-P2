@@ -10,7 +10,7 @@ function searchDeezer() {
         .map(
           (
             books
-          ) => `<div class="card" style="height: 100%; background-color:#10171F">
+          ) => `<div class="card niceBooks" style="height: 100%; background-color:#10171F">
         <img src="${books.img}" class="card-img-top img-fluid w-100" alt="...">
         <div class="card-body" style="height: 100%">
         <h5 class="card-title">${books.title}</h5>
@@ -22,6 +22,12 @@ function searchDeezer() {
         </div>`
         )
         .join(" ");
+      const deleteCard = document.querySelectorAll(".skip");
+      deleteCard.forEach((disappear) => {
+        disappear.addEventListener("click", () => {
+          disappear.closest(".niceBooks").remove();
+        });
+      });
     })
     .catch((err) => {
       console.log("rejected");
